@@ -41,25 +41,6 @@ El sistema permite registrar clientes con sus cuentas, realizar depósitos, reti
   - `mostrarClientes()`
 
 ---
-
-### 🔹 Clase `MiniBanco (Main)`
-- Contiene el método `main`  
-- Muestra un menú en consola:
-=== Mini Banco ===
-
-Registrar cliente
-
-Depositar dinero
-
-Retirar dinero
-
-Consultar saldo
-
-Mostrar clientes
-
-Salir
-
-yaml
 Copiar
 Editar
 
