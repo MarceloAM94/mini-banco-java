@@ -41,7 +41,3 @@ El sistema permite registrar clientes con sus cuentas, realizar depósitos, reti
   - `mostrarClientes()`
 
 ---
-Copiar
-Editar
-
----
