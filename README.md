@@ -1,43 +1,93 @@
-# 🏦 Mini Banco en Java
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
-![License](https://img.shields.io/badge/License-MIT-blue)
+🏦 Mini Banco Java
 
-Aplicación de consola desarrollada en **Java** para practicar **Programación Orientada a Objetos (POO)**.  
-El sistema permite registrar clientes con sus cuentas, realizar depósitos, retiros, consultar saldos y mostrar la lista de clientes.
+![Java](https://img.shields.io/badge/Language-Java-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Platform](https://img.shields.io/badge/Platform-Consola-blue)
+![Status](https://img.shields.io/badge/Status-Completo-success)
+![POO](https://img.shields.io/badge/Concept-POO-lightgrey)
 
----
+📖 Descripción
 
-## 🧩 Modelo de Clases
+Mini Banco Java es una aplicación de consola que simula un sistema bancario básico.
 
-### 🔹 Clase `Cuenta`
-- **Atributos:**
-  - `numeroCuenta: int`
-  - `saldo: double`
-- **Métodos:**
-  - `depositar(monto: double)`
-  - `retirar(monto: double)`
-  - `consultarSaldo(): double`
+Permite:
 
----
+💰 Registrar clientes y asignarles cuentas (Cuenta de Ahorro o Cuenta Corriente).
+🏦 Realizar operaciones como depósitos, retiros y consulta de saldo.
+📋 Listar clientes y seleccionar uno para gestionar su cuenta.
 
-### 🔹 Clase `Cliente`
-- **Atributos:**
-  - `id: int`
-  - `nombre: String`
-  - `cuenta: Cuenta`
-- **Métodos:**
-  - `mostrarInfoCliente()`
-  - `getCuenta(): Cuenta`
+El proyecto está desarrollado usando Programación Orientada a Objetos (POO) en Java, aplicando herencia, polimorfismo, encapsulamiento y abstracción.
 
----
+🛠️ Estructura del proyecto
+Clases principales
 
-### 🔹 Clase `Banco`
-- **Atributos:**
-  - `clientes: ArrayList<Cliente>`
-- **Métodos:**
-  - `registrarCliente(cliente: Cliente)`
-  - `buscarCliente(id: int): Cliente`
-  - `mostrarClientes()`
+Cuenta (abstracta)
+Representa una cuenta bancaria genérica.
 
----
+Atributos: nroAccount, balance.
+
+Métodos: deposit(), withdraw() (abstracto), getBalance().
+
+CuentaAhorro
+Subclase de Cuenta.
+
+Requiere un saldo mínimo de 50 al retirar.
+
+Implementa withdraw() y toString() personalizado.
+
+CuentaCorriente
+Subclase de Cuenta.
+
+Permite sobregiro hasta -500.
+
+Implementa withdraw() y toString() personalizado.
+
+Cliente
+Representa un cliente del banco.
+
+Atributos: codClient, name, account.
+
+Métodos: depositar(), retirar(), mostrarEstadoCuenta().
+
+Banco
+Maneja la lista de clientes.
+
+Métodos: addClient(), listClients(), searchClient().
+
+MainBanco
+Clase principal con menú interactivo para la consola.
+
+Permite registrar clientes, listar clientes y operar sobre las cuentas seleccionadas.
+
+🚀 Uso
+
+Clonar el repositorio:
+
+git clone git@github.com:MarceloAM94/mini-banco-java.git
+
+
+Compilar el proyecto:
+
+javac src/*.java
+
+
+Ejecutar la aplicación:
+
+java src.MainBanco
+
+
+Interactuar con el menú de consola para registrar clientes, listar y seleccionar cuentas para operaciones.
+
+💡 Conceptos de POO aplicados
+
+Encapsulamiento: atributos privados con getters y setters.
+
+Abstracción: Cuenta es una clase abstracta.
+
+Herencia: CuentaAhorro y CuentaCorriente extienden Cuenta.
+
+Polimorfismo: las operaciones withdraw() y deposit() se comportan según el tipo de cuenta.
+
+📝 Licencia
+
+Este proyecto está bajo la licencia MIT.
