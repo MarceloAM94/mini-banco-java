@@ -32,4 +32,24 @@ public class Cliente {
     public void setAccount(Cuenta account) {
         this.account = account;
     }
+
+    public void depositar(double monto) {
+        account.deposit(monto);
+    }
+
+    public void retirar(double monto) {
+        account.withdraw(monto);
+    }
+
+    public void mostrarEstadoCuenta() {
+        System.out.println("Cliente: " + name + " (Código: " + codClient + ")");
+        System.out.println("Cuenta: " + account); // llama automáticamente al toString() de la subclase
+        System.out.println("---------------------------");
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente [Código: " + codClient + ", Nombre: " + name + ", Cuenta: " + account + "]";
+    }
+
 }
