@@ -72,14 +72,14 @@ java src.MainBanco
 
 4. Interactuar con el menú de consola para registrar clientes, listar y seleccionar cuentas para operaciones.
 
-##💡 Conceptos de POO aplicados
-###Encapsulamiento: atributos privados con getters y setters.
+## 💡 Conceptos de POO aplicados
+### Encapsulamiento: atributos privados con getters y setters.
 
-###Abstracción: Cuenta es una clase abstracta.
+### Abstracción: Cuenta es una clase abstracta.
 
-###Herencia: CuentaAhorro y CuentaCorriente extienden Cuenta.
+### Herencia: CuentaAhorro y CuentaCorriente extienden Cuenta.
 
-###Polimorfismo: las operaciones withdraw() y deposit() se comportan según el tipo de cuenta.
+### Polimorfismo: las operaciones withdraw() y deposit() se comportan según el tipo de cuenta.
 
-##📝 Licencia
+## 📝 Licencia
 Este proyecto está bajo la licencia MIT.
